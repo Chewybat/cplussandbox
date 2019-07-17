@@ -56,10 +56,36 @@ int main()
 		<< previous1 << "and" << previous2
 		<< endl;							//step3
 	cout << "Enter the position of the desired "
-		<< "Fibonacci number: ";
-	cin << nthFibonacci;
+		<< "Fibonacci number: ";			//step4
+	cin << nthFibonacci;					//step5
 	cout << endl;
 
+	if (nthFibonacci == 1) {				//step 6.a
+		current = previous1;
+	}
+	else if (nthFibonacci == 2) {
+		current = previous2;
+			
+	}
+	else
+	{
+		counter = 3
+
+		//Steps 6.c.2- 6.c.5
+			while (counter <= nthFibonacci)
+			{
+				current = previous2 + previous1;
+				previous1 = previous2;
+				previous2 = current;
+				counter++
+
+			}//end while
+	}//end else
+
+	cout << "THe Fibonacci number at position "
+		 << nthFibonacci << " is " << current
+		 << endl;						//Step7
+
 	return 0;
-}
+}//end main
 
